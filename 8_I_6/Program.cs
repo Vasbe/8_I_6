@@ -1,3 +1,4 @@
+//Определить является ли строка палиндромом
 using System;
 
 namespace _8_I_6
@@ -8,13 +9,22 @@ namespace _8_I_6
         {
             Console.WriteLine("Введите сторку s: ");
             string s = Console.ReadLine();
-                if (s[0] != s[s.Length-1])
+                s = s.ToLower(); 
+                int i = 0;
+            int a = 0;
+                int j = s.Length - 1;
+            while (i != j) 
+            {
+                if (s[i++] != s[j--])
                 {
-                    Console.WriteLine("Строка не является палиндромом");
+                    a = 1;
                 }
                 else {
-                    Console.WriteLine("Строка является палиндромом");
+                    a = 0;
                 }
+            }
+            if (a == 1) Console.WriteLine("Строка не является палиндромом");
+            if (a == 0) Console.WriteLine("Строка является палиндромом"); 
         }
     }
 }
