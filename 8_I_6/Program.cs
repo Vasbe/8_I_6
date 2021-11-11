@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace _8_I_6
 {
@@ -8,13 +8,13 @@ namespace _8_I_6
         {
             Console.WriteLine("Введите сторку s: ");
             string s = Console.ReadLine();
-            int index = 0;
-            for (int i = 0;i < s.Length; i++) {
-                if (s.Substring(i, 1) != " ") {
-                    index++;
+                if (s[0] != s[s.Length-1])
+                {
+                    Console.WriteLine("Строка не является палиндромом");
                 }
-            }
-            Console.WriteLine("Всего букв в строке: " + index);
+                else {
+                    Console.WriteLine("Строка является палиндромом");
+                }
         }
     }
 }
